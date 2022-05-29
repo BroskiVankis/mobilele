@@ -28,6 +28,9 @@ public class OfferEntity {
     private int mileage;
 
     @Column(nullable = false)
+    private String description;
+
+    @Column(nullable = false)
     private BigDecimal price;
 
     @Enumerated(EnumType.STRING)
@@ -123,6 +126,15 @@ public class OfferEntity {
         return this;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public OfferEntity setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "OfferEntity{" +
@@ -130,6 +142,7 @@ public class OfferEntity {
                 ", engine=" + engine +
                 ", ImageUrl='" + ImageUrl + '\'' +
                 ", mileage=" + mileage +
+                ", description='" + description + '\'' +
                 ", price=" + price +
                 ", transmission=" + transmission +
                 ", year=" + year +
